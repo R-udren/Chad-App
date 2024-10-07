@@ -29,19 +29,21 @@ prasmēm, projektu saraksts un kontaktinformācija.
 * Izmanto HTML5 semantiskos elementus (`<header>`, `<nav>`, `<section>`, `<article>`, `<footer>`, utt.).
 
 * Sadaļas:
-    * Galvene (Header) ar tavu vārdu un navigācijas izvēlni.
-    * Par mani (About Me) sadaļa, kurā ir īss apraksts par tevi, iespējams, ar tavu fotoattēlu.
-    * Prasmes (Skills) sadaļa, kurā ir saraksts ar tavām prasmēm (izmanto CSS, lai prasmes attēlotu grafiski, piemēram,
+    * Galvene (**Header**) ar tavu vārdu un navigācijas izvēlni.
+    * Par mani (**About Me**) sadaļa, kurā ir īss apraksts par tevi, iespējams, ar tavu fotoattēlu.
+    * Prasmes (**Skills**) sadaļa, kurā ir saraksts ar tavām prasmēm (izmanto CSS, lai prasmes attēlotu grafiski,
+      piemēram,
       progress bar vai zvaigznes).
-    * Projekti (Projects) sadaļa, kurā ir saraksts ar taviem projektiem. Katram projektam jābūt atsevišķam blokam ar
+    * Projekti (**Projects**) sadaļa, kurā ir saraksts ar taviem projektiem. Katram projektam jābūt atsevišķam blokam ar
       nosaukumu, īsu aprakstu un saiti uz projektu.
-    * Kontakti (Contact) sadaļa ar saziņas formu vai sociālo tīklu saitēm.
+    * Kontakti (**Contact**) sadaļa ar saziņas formu vai sociālo tīklu saitēm.
 * Atbilstoša responsivitāte, lai lapa izskatītos labi gan uz lieliem, gan uz maziem ekrāniem (izmanto CSS media
   queries).
 * Dizains:
-    * Izmanto Google Fonts, lai pievienotu pielāgotus fontus.
+    * Izmanto **Google Fonts**, lai pievienotu pielāgotus fontus.
     * Veido vienotu krāsu shēmu (vismaz divas galvenās krāsas).
-    * Izmanto CSS pārveides un pārejas (transform, transition), lai pievienotu interaktīvus efektus (piemēram, mainās
+    * Izmanto CSS pārveides un pārejas (`transform`, `transition`), lai pievienotu interaktīvus efektus (piemēram,
+      mainās
       krāsa, kad kursors uzbrauc uz elementa).
     * Nodrošini, ka attēli un fonti ir pielāgoti dažādu ierīču izmēriem.
 
@@ -87,8 +89,8 @@ ir paredzēts, lai praktizētu CSS izkārtojumus, hover efektus, pārejas (trans
 * Papildu uzdevumi:
     * Izvērsta stilizācija: Eksperimentē ar dažādām krāsu shēmām, piemēram, izmanto gradientus navigācijas fonam vai
       kartītēm.
-    * Ikonas izvēlnē: Pievieno ikonu (piemēram, izmantojot FontAwesome) blakus katram izvēlnes elementam.
-    * Dark mode: Pievieno CSS Dark mode versiju, kur mainās izvēlnes un kartīšu krāsas.
+    * Ikonas izvēlnē: Pievieno ikonu (piemēram, izmantojot **FontAwesome**) blakus katram izvēlnes elementam.
+    * Dark mode: Pievieno CSS **Dark mode** versiju, kur mainās izvēlnes un kartīšu krāsas.
 
 ### Task 5
 
@@ -100,7 +102,7 @@ ir paredzēts, lai praktizētu CSS izkārtojumus, hover efektus, pārejas (trans
       informācija par kartiņas saturu.
 * Pievieno animāciju hover efektam:
     * Pielieto CSS Keyframe animācijas, lai kartīšu hover efekti būtu vēl interesantāki. Piemēram, kartītes attēlam
-      vajadzētu lēnām palielināties (zoom-in) vai mainīt izskatu.
+      vajadzētu lēnām palielināties (_zoom-in_) vai mainīt izskatu.
 * Pievieno gradientus un pārejas:
     * Pievieno CSS gradientus kartītēm vai pogām, kas vizuāli uzlabo dizainu. Izmanto gradientu pārejas uz pogām hover
       efektos, lai mainītu pogas krāsu.
