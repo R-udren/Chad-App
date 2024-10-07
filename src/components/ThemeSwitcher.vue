@@ -26,8 +26,8 @@ export default {
 
 <template>
   <button @click="toggleTheme" class="theme-switcher">
-    <span v-if="isDarkTheme">🌞 Light Mode</span>
-    <span v-else>🌜 Dark Mode</span>
+    <span v-if="isDarkTheme">🌞 Light</span>
+    <span v-else>🌜 Dark</span>
   </button>
 </template>
 

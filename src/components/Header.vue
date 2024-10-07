@@ -1,33 +1,43 @@
 <template>
   <header class="app-header">
     <nav class="navbar">
-      <div class="logo gradient-logo">Chad Web Application</div>
-      <ul class="nav-links">
-        <li>
-          <router-link to="/">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/about">About</router-link>
-        </li>
-        <li>
-          <router-link to="/contact">Contact</router-link>
-        </li>
-        <li>
-          <router-link to="/portfolio">Portfolio</router-link>
-        </li>
-      </ul>
-      <ThemeSwitcher/>
+      <div class="left-section">
+        <div class="logo gradient-logo">Chad Web Application</div>
+      </div>
+      <div class="center-section">
+        <ul class="nav-links">
+          <li>
+            <router-link to="/">Home</router-link>
+          </li>
+          <li>
+            <router-link to="/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/contact">Contact</router-link>
+          </li>
+          <li>
+            <router-link to="/portfolio">Portfolio</router-link>
+          </li>
+        </ul>
+      </div>
+      <div class="right-section">
+        <ThemeSwitcher class="primary-button" />
+      </div>
+      <!-- Встраиваем бургер-меню -->
+      <BurgerMenu />
     </nav>
   </header>
 </template>
 
 <script>
 import ThemeSwitcher from './ThemeSwitcher.vue';
+import BurgerMenu from './BurgerMenu.vue';
 
 export default {
   name: "Header",
   components: {
     ThemeSwitcher,
+    BurgerMenu,
   },
 };
 </script>
@@ -39,7 +49,6 @@ export default {
   padding: 1rem 2rem;
 }
 
-/* Dark theme styles */
 body.dark-theme .app-header {
   background: var(--dark-background-color);
 }
@@ -48,15 +57,20 @@ body.dark-theme .app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient text styles for the logo */
 .logo {
   font-size: var(--h4);
   font-weight: 700;
-}
-
-/* Gradient styles for the logo */
-.gradient-logo {
   background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
   background-clip: text;
   -webkit-background-clip: text;
@@ -64,26 +78,23 @@ body.dark-theme .app-header {
   color: transparent;
 }
 
-/* Dark theme gradient */
-body.dark-theme .gradient-logo {
+body.dark-theme .logo {
   background: linear-gradient(120deg, var(--dark-primary-color), var(--dark-accent-color));
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  position: relative;
 }
 
 .nav-links li {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-/* Default link styles */
 .nav-links a {
   text-decoration: none;
   color: var(--text-color);
@@ -91,24 +102,20 @@ body.dark-theme .gradient-logo {
   font-weight: 500;
 }
 
-/* Dark theme link styles */
 body.dark-theme .nav-links a {
   color: var(--dark-text-color);
 }
 
-/* Link hover effect */
 .nav-links a:hover {
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
 }
 
-/* Dark theme hover */
 body.dark-theme .nav-links a:hover {
   color: var(--dark-primary-color);
   text-shadow: 0 0 5px var(--dark-primary-color);
 }
 
-/* Active link effect (underline) */
 .nav-links a::after {
   content: '';
   display: block;
@@ -129,7 +136,9 @@ body.dark-theme .nav-links a::after {
   width: 100%;
 }
 
-body.dark-theme .nav-links a:hover::after {
-  width: 100%;
+@media (max-width: 768px) {
+  .center-section {
+    display: none;
+  }
 }
 </style>
