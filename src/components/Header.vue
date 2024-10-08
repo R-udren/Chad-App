@@ -20,7 +20,7 @@ export default {
       <div class="center-section">
         <ul class="nav-links">
           <li>
-            <router-link to="/">Home</router-link >
+            <router-link to="/">Home</router-link>
           </li>
           <li>
             <router-link to="/about">About</router-link>
@@ -34,20 +34,20 @@ export default {
         </ul>
       </div>
       <div class="right-section">
-        <ThemeSwitcher class="primary-button" />
+        <ThemeSwitcher class="primary-button"/>
       </div>
-      <BurgerMenu />
+      <BurgerMenu/>
     </nav>
   </header>
 </template>
 
 
-
 <style scoped>
 .app-header {
-  background: var(--background);
+  background-color: var(--background);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
+  transition: background-color 0.3s ease-out;
 }
 
 .navbar {
@@ -57,9 +57,20 @@ export default {
   gap: 1rem;
 }
 
-.left-section,
-.center-section,
+.left-section {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+.center-section {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .right-section {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
 }
@@ -74,7 +85,6 @@ export default {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
-
 
 /* Navigation Links */
 .nav-links {
@@ -105,7 +115,7 @@ export default {
   display: block;
   width: 0;
   height: 2px;
-  background: var(--primary);
+  background-color: var(--primary);
   transition: width 0.3s ease;
   position: absolute;
   left: 0;

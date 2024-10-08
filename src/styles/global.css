@@ -1,6 +1,4 @@
 :root {
-    color-scheme: light dark;
-
     /* Fonts & Sizes */
     font-family: 'Inter', ui-sans-serif;
     --font-scale: 1.333;
@@ -43,6 +41,8 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
+    font-size: var(--p);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1, h2, h3, h4, h5, h6, p {
