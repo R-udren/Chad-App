@@ -36,7 +36,7 @@ export default {
 </script>
 
 <template>
-  <button @click="toggleTheme" class="theme-switcher">
+  <button class="theme-switcher" @click="toggleTheme">
     <span v-if="isDarkTheme">🌞 Light</span>
     <span v-else>🌜 Dark</span>
   </button>

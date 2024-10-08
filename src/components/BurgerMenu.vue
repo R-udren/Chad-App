@@ -23,7 +23,7 @@ export default {
       <span :class="{ 'open': isOpen }">☰</span>
     </button>
 
-    <ul class="nav-links" v-if="isOpen">
+    <ul v-if="isOpen" class="nav-links">
       <li>
         <router-link to="/" @click="closeMenu">Home</router-link>
       </li>

@@ -10,10 +10,18 @@
     --h1: calc(var(--h2) * var(--font-scale));
     --small: calc(var(--p) / var(--font-scale));
 
+    --margin: 0 3%;
     --margin-lg: 0 12%;
     --margin-md: 0 6%;
     --border1: 1rem;
     --border05: 0.5rem;
+
+    --spacing: 1rem;
+    --spacing-sm: 0.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    --padding: 1rem;
 }
 
 /* Colors */
