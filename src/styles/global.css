@@ -1,20 +1,5 @@
 :root {
-    /* Colors */
-    /* Catppuccin Latte Theme */
-    --text: #4c4f69;
-    --subtext: #6c6f85;
-    --background: #eff1f5;
-    --primary: #8839ef;
-    --secondary: #7287fd;
-    --accent-color: #ea76cb;
-
-    /* Catppuccin Mocha Theme */
-    --dark-text: #cdd6f4;
-    --dark-subtext: #a6adc8;
-    --dark-background: #1e1e2e;
-    --dark-primary: #cba6f7;
-    --dark-secondary: #89b4fa;
-    --dark-accent: #f5c2e7;
+    color-scheme: light dark;
 
     /* Fonts & Sizes */
     font-family: 'Inter', ui-sans-serif;
@@ -33,17 +18,31 @@
     --border05: 0.5rem;
 }
 
+/* Colors */
+[data-theme="light"] {
+    --text: #4c4f69;
+    --subtext: #6c6f85;
+    --background: #eff1f5;
+    --primary: #8839ef;
+    --secondary: #7287fd;
+    --accent: #ea76cb;
+}
+
+[data-theme="dark"] {
+    --text: #cdd6f4;
+    --subtext: #a6adc8;
+    --background: #1e1e2e;
+    --primary: #cba6f7;
+    --secondary: #89b4fa;
+    --accent: #f5c2e7;
+}
+
 body {
     color: var(--text);
     background-color: var(--background);
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body.dark-theme {
-    color: var(--dark-text);
-    background-color: var(--dark-background);
 }
 
 h1, h2, h3, h4, h5, h6, p {

@@ -9,16 +9,21 @@ export default {
   mounted() {
     // Check current theme in localStorage
     this.isDarkTheme = localStorage.getItem("theme") === "dark";
-    if (this.isDarkTheme) {
-      document.body.classList.add("dark-theme");
-    }
+    this.applyTheme();
   },
   methods: {
     toggleTheme() {
       this.isDarkTheme = !this.isDarkTheme;
-      document.body.classList.toggle("dark-theme", this.isDarkTheme);
+      this.applyTheme();
       // Save current theme in localStorage
       localStorage.setItem("theme", this.isDarkTheme ? "dark" : "light");
+    },
+    applyTheme() {
+      if (this.isDarkTheme) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
     },
   },
 };
@@ -45,33 +50,14 @@ export default {
 
 /* Light theme styles */
 .theme-switcher:hover {
-  background: linear-gradient(120deg, var(--primary), var(--accent-color));
+  background: linear-gradient(120deg, var(--primary), var(--accent));
   color: var(--background);
   transform: translateY(-2px);
 }
 
 .theme-switcher:active {
-  background: var(--accent-color);
+  background: var(--accent);
   color: var(--background);
-  transform: scale(0.95);
-}
-
-/* Dark theme styles */
-body.dark-theme .theme-switcher {
-  background: var(--dark-background);
-  border-color: var(--dark-primary);
-  color: var(--dark-primary);
-}
-
-body.dark-theme .theme-switcher:hover {
-  background: linear-gradient(120deg, var(--dark-primary), var(--dark-accent));
-  color: var(--dark-background);
-  transform: translateY(-2px);
-}
-
-body.dark-theme .theme-switcher:active {
-  background: var(--dark-accent);
-  color: var(--dark-background);
   transform: scale(0.95);
 }
 </style>

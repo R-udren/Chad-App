@@ -50,10 +50,6 @@ export default {
   padding: 1rem 2rem;
 }
 
-body.dark-theme .app-header {
-  background: var(--dark-background);
-}
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -72,17 +68,13 @@ body.dark-theme .app-header {
 .logo {
   font-size: var(--h4);
   font-weight: 700;
-  background: linear-gradient(120deg, var(--primary), var(--accent-color));
+  background: linear-gradient(120deg, var(--primary), var(--accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
-body.dark-theme .logo {
-  background: linear-gradient(120deg, var(--dark-primary), var(--dark-accent));
-  background-clip: text;
-}
 
 /* Navigation Links */
 .nav-links {
@@ -103,18 +95,9 @@ body.dark-theme .logo {
   font-weight: 500;
 }
 
-body.dark-theme .nav-links a {
-  color: var(--dark-text);
-}
-
 .nav-links a:hover {
   color: var(--primary);
   text-shadow: 0 0 5px var(--primary);
-}
-
-body.dark-theme .nav-links a:hover {
-  color: var(--dark-primary);
-  text-shadow: 0 0 5px var(--dark-primary);
 }
 
 .nav-links a::after {
@@ -127,10 +110,6 @@ body.dark-theme .nav-links a:hover {
   position: absolute;
   left: 0;
   bottom: -2px;
-}
-
-body.dark-theme .nav-links a::after {
-  background: var(--dark-primary);
 }
 
 .nav-links a:hover::after {
