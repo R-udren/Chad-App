@@ -8,7 +8,13 @@ export default {
   },
   mounted() {
     // Check current theme in localStorage
-    this.isDarkTheme = localStorage.getItem("theme") === "dark";
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      this.isDarkTheme = storedTheme === "dark";
+    } else {
+      // Check system preference
+      this.isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
     this.applyTheme();
   },
   methods: {
@@ -48,7 +54,6 @@ export default {
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
-/* Light theme styles */
 .theme-switcher:hover {
   background: linear-gradient(120deg, var(--primary), var(--accent));
   color: var(--background);
@@ -59,5 +64,9 @@ export default {
   background: var(--accent);
   color: var(--background);
   transform: scale(0.95);
+}
+
+.theme-switcher:target {
+  outline: none;
 }
 </style>
