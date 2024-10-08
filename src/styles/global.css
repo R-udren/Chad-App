@@ -1,20 +1,20 @@
 :root {
     /* Colors */
     /* Catppuccin Latte Theme */
-    --text-color: #4c4f69;
-    --subtext-color: #6c6f85;
-    --background-color: #eff1f5;
-    --primary-color: #8839ef;
-    --secondary-color: #7287fd;
+    --text: #4c4f69;
+    --subtext: #6c6f85;
+    --background: #eff1f5;
+    --primary: #8839ef;
+    --secondary: #7287fd;
     --accent-color: #ea76cb;
 
     /* Catppuccin Mocha Theme */
-    --dark-text-color: #cdd6f4;
-    --dark-subtext-color: #a6adc8;
-    --dark-background-color: #1e1e2e;
-    --dark-primary-color: #cba6f7;
-    --dark-secondary-color: #89b4fa;
-    --dark-accent-color: #f5c2e7;
+    --dark-text: #cdd6f4;
+    --dark-subtext: #a6adc8;
+    --dark-background: #1e1e2e;
+    --dark-primary: #cba6f7;
+    --dark-secondary: #89b4fa;
+    --dark-accent: #f5c2e7;
 
     /* Fonts & Sizes */
     font-family: 'Inter', ui-sans-serif;
@@ -34,16 +34,16 @@
 }
 
 body {
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--text);
+    background-color: var(--background);
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 body.dark-theme {
-    color: var(--dark-text-color);
-    background-color: var(--dark-background-color);
+    color: var(--dark-text);
+    background-color: var(--dark-background);
 }
 
 h1, h2, h3, h4, h5, h6, p {
