@@ -1,8 +1,59 @@
 # Chad App
 
-## Tasks
+## Project Task Checklist
 
-### Task 1
+### 1. Website Structure
+
+- [ ] Create a main structure for the website using semantic HTML elements.
+    - [x] Implement **Header** with site logo/name and navigation links.
+    - [ ] Create a **Main** section with headings, paragraphs, and images.
+    - [ ] Design a **Sidebar** with related content or additional information.
+    - [ ] Add a **Footer** with social links and basic site information.
+
+### 2. Page Components
+
+- [ ] Build separate pages using Vue components.
+    - [ ] **Home**: Main introduction with welcome text and content.
+    - [ ] **About**: Personal information and biography with a photo.
+    - [ ] **Skills**: Display skills using visual elements like bars or stars.
+    - [ ] **Projects**: List of projects with descriptions and links.
+    - [ ] **Contact**: Contact form or social media links.
+
+### 3. Navigation
+
+- [ ] Implement a responsive **Navigation Bar** with:
+    - [ ] Links to **Home**, **About**, **Projects**, and **Contact** pages.
+    - [ ] **Dropdown menu** for a "Services" section.
+    - [ ] **Hamburger menu** for the mobile view.
+
+### 4. Card Components
+
+- [ ] Design interactive **Card Components** using CSS:
+    - [ ] Each card includes an image, title, description, and button.
+    - [ ] Apply hover effects and transitions for a smooth user experience.
+    - [ ] Create a **Modal Window** that opens on button click.
+
+### 5. Animations and Effects
+
+- [ ] Add CSS animations and keyframes for hover and interactive effects.
+- [ ] Implement visual improvements using gradients and transitions.
+- [ ] Ensure smooth user experience through optimized CSS animations.
+
+### 6. Responsive Design
+
+- [ ] Use **media queries** to adjust layout for different devices.
+- [ ] Implement a **responsive grid** or **flex layout** for cards and content.
+- [ ] Optimize the navigation bar for both desktop and mobile screens.
+
+### 7. Dark Mode
+
+- [x] Implement a **Dark Mode** switch that toggles between light and dark themes.
+- [ ] Ensure components and pages adjust correctly based on the theme.
+
+<details>
+  <summary>Raw Tasks</summary>
+
+#### Task 1
 
 Izveidot pamata HTML tīmekļa vietnes struktūru ar galveno sadaļu, galveni, kājeni, navigācijas izvēlni un dažiem
 vienkāršiem elementiem.
@@ -21,7 +72,7 @@ vienkāršiem elementiem.
     * Vari pievienot pamata CSS, lai stilizētu galveni, navigācijas joslu, galveno saturu, sānu joslu un kājeni. To var
       izdarīt vai nu pašā HTML failā, izmantojot `<style>`, vai izveidojot atsevišķu CSS failu.
 
-### Task 2
+#### Task 2
 
 Uzdevums: Izveidot vienkāršu portfolio mājaslapu, izmantojot tikai HTML un CSS. Lapā jāiekļauj sadaļas par sevi,
 prasmēm, projektu saraksts un kontaktinformācija.
@@ -47,7 +98,7 @@ prasmēm, projektu saraksts un kontaktinformācija.
       krāsa, kad kursors uzbrauc uz elementa).
     * Nodrošini, ka attēli un fonti ir pielāgoti dažādu ierīču izmēriem.
 
-### Task 3
+#### Task 3
 
 Uzdevums: Karte (Card) ar hover efektiem
 
@@ -71,7 +122,7 @@ ir paredzēts, lai praktizētu CSS izkārtojumus, hover efektus, pārejas (trans
     * Pievieno CSS pārejas (`transition`) kartītei, lai hover efekti būtu gludi.
     * Pielieto keyframes animācijas, lai kartīte “paceltos” vai izveidotu kādu citu vizuālu efektu.
 
-### Task 4
+#### Task 4
 
 * Navigācijas izvēlne:
     * Pievieno vienkāršu izvēlni lapas augšpusē.
@@ -92,7 +143,7 @@ ir paredzēts, lai praktizētu CSS izkārtojumus, hover efektus, pārejas (trans
     * Ikonas izvēlnē: Pievieno ikonu (piemēram, izmantojot **FontAwesome**) blakus katram izvēlnes elementam.
     * Dark mode: Pievieno CSS **Dark mode** versiju, kur mainās izvēlnes un kartīšu krāsas.
 
-### Task 5
+#### Task 5
 
 * Pievieno Dropdown izvēlni:
     * Papildini esošo navigācijas izvēlni ar dropdown funkcionalitāti. Kad lietotājs pārbrauc ar peli pār izvēlnes
@@ -109,3 +160,4 @@ ir paredzēts, lai praktizētu CSS izkārtojumus, hover efektus, pārejas (trans
 * Izveido responsīvu hamburgera izvēlni:
     * Izveido hamburgera izvēlni, kas parādās mobilajās ierīcēs, aizstājot navigācijas joslu. Kad lietotājs klikšķina uz
       hamburgera ikonas, parādās izvelkamā izvēlne.
+</details>
