@@ -23,7 +23,6 @@
       <div class="right-section">
         <ThemeSwitcher class="primary-button" />
       </div>
-      <!-- Встраиваем бургер-меню -->
       <BurgerMenu />
     </nav>
   </header>
