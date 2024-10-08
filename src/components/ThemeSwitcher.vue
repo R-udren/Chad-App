@@ -52,6 +52,7 @@ export default {
   font-size: var(--p);
   color: var(--primary);
   transition: background 0.3s, color 0.3s, transform 0.2s;
+  outline: none;
 }
 
 .theme-switcher:hover {
@@ -64,9 +65,5 @@ export default {
   background: var(--accent);
   color: var(--background);
   transform: scale(0.95);
-}
-
-.theme-switcher:target {
-  outline: none;
 }
 </style>
