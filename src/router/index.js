@@ -1,7 +1,7 @@
-import Home from '../pages/Home.vue';
-import About from '../pages/About.vue';
-import Contact from '../pages/Contact.vue';
-import Portfolio from '../pages/Portfolio.vue';
+import Home from '../views/Home.vue';
+import About from '../views/About.vue';
+import Contact from '../views/Contact.vue';
+import Portfolio from '../views/Portfolio.vue';
 
 export default [
   { path: '/', component: Home },

@@ -1,3 +1,22 @@
+<script>
+export default {
+  name: "BurgerMenu",
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isOpen = !this.isOpen;
+    },
+    closeMenu() {
+      this.isOpen = false;
+    },
+  },
+};
+</script>
+
 <template>
   <div>
     <button class="burger-menu" @click="toggleMenu">
@@ -21,25 +40,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "BurgerMenu",
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-    },
-    closeMenu() {
-      this.isOpen = false;
-    },
-  },
-};
-</script>
-
 <style scoped>
 .burger-menu {
   background: none;
@@ -53,9 +53,10 @@ export default {
 }
 
 .nav-links {
+  display: grid;
   list-style: none;
   background: var(--background);
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
   width: 100%;
@@ -67,16 +68,8 @@ export default {
   margin: 0.5rem 0;
 }
 
-body.dark-theme .nav-links {
-  background: var(--dark-background);
-}
-
 .nav-links a {
   text-decoration: none;
   color: var(--text);
-}
-
-body.dark-theme .nav-links a {
-  color: var(--dark-text);
 }
 </style>
