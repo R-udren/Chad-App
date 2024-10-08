@@ -33,45 +33,45 @@ export default {
 
 <style scoped>
 .theme-switcher {
-  background: var(--background-color);
-  border: 1px solid var(--primary-color);
+  background: var(--background);
+  border: 1px solid var(--primary);
   border-radius: 8px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: var(--p);
-  color: var(--primary-color);
+  color: var(--primary);
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 /* Light theme styles */
 .theme-switcher:hover {
-  background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
-  color: var(--background-color);
+  background: linear-gradient(120deg, var(--primary), var(--accent-color));
+  color: var(--background);
   transform: translateY(-2px);
 }
 
 .theme-switcher:active {
   background: var(--accent-color);
-  color: var(--background-color);
+  color: var(--background);
   transform: scale(0.95);
 }
 
 /* Dark theme styles */
 body.dark-theme .theme-switcher {
-  background: var(--dark-background-color);
-  border-color: var(--dark-primary-color);
-  color: var(--dark-primary-color);
+  background: var(--dark-background);
+  border-color: var(--dark-primary);
+  color: var(--dark-primary);
 }
 
 body.dark-theme .theme-switcher:hover {
-  background: linear-gradient(120deg, var(--dark-primary-color), var(--dark-accent-color));
-  color: var(--dark-background-color);
+  background: linear-gradient(120deg, var(--dark-primary), var(--dark-accent));
+  color: var(--dark-background);
   transform: translateY(-2px);
 }
 
 body.dark-theme .theme-switcher:active {
-  background: var(--dark-accent-color);
-  color: var(--dark-background-color);
+  background: var(--dark-accent);
+  color: var(--dark-background);
   transform: scale(0.95);
 }
 </style>

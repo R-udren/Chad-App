@@ -1,3 +1,16 @@
+<script>
+import ThemeSwitcher from './ThemeSwitcher.vue';
+import BurgerMenu from './BurgerMenu.vue';
+
+export default {
+  name: "Header",
+  components: {
+    ThemeSwitcher,
+    BurgerMenu,
+  },
+};
+</script>
+
 <template>
   <header class="app-header">
     <nav class="navbar">
@@ -7,7 +20,7 @@
       <div class="center-section">
         <ul class="nav-links">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Home</router-link >
           </li>
           <li>
             <router-link to="/about">About</router-link>
@@ -28,28 +41,17 @@
   </header>
 </template>
 
-<script>
-import ThemeSwitcher from './ThemeSwitcher.vue';
-import BurgerMenu from './BurgerMenu.vue';
 
-export default {
-  name: "Header",
-  components: {
-    ThemeSwitcher,
-    BurgerMenu,
-  },
-};
-</script>
 
 <style scoped>
 .app-header {
-  background: var(--background-color);
+  background: var(--background);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
 }
 
 body.dark-theme .app-header {
-  background: var(--dark-background-color);
+  background: var(--dark-background);
 }
 
 .navbar {
@@ -70,7 +72,7 @@ body.dark-theme .app-header {
 .logo {
   font-size: var(--h4);
   font-weight: 700;
-  background: linear-gradient(120deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(120deg, var(--primary), var(--accent-color));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +80,7 @@ body.dark-theme .app-header {
 }
 
 body.dark-theme .logo {
-  background: linear-gradient(120deg, var(--dark-primary-color), var(--dark-accent-color));
+  background: linear-gradient(120deg, var(--dark-primary), var(--dark-accent));
   background-clip: text;
 }
 
@@ -96,23 +98,23 @@ body.dark-theme .logo {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text);
   position: relative;
   font-weight: 500;
 }
 
 body.dark-theme .nav-links a {
-  color: var(--dark-text-color);
+  color: var(--dark-text);
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color);
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
 }
 
 body.dark-theme .nav-links a:hover {
-  color: var(--dark-primary-color);
-  text-shadow: 0 0 5px var(--dark-primary-color);
+  color: var(--dark-primary);
+  text-shadow: 0 0 5px var(--dark-primary);
 }
 
 .nav-links a::after {
@@ -120,7 +122,7 @@ body.dark-theme .nav-links a:hover {
   display: block;
   width: 0;
   height: 2px;
-  background: var(--primary-color);
+  background: var(--primary);
   transition: width 0.3s ease;
   position: absolute;
   left: 0;
@@ -128,7 +130,7 @@ body.dark-theme .nav-links a:hover {
 }
 
 body.dark-theme .nav-links a::after {
-  background: var(--dark-primary-color);
+  background: var(--dark-primary);
 }
 
 .nav-links a:hover::after {

@@ -54,7 +54,7 @@ export default {
 
 .nav-links {
   list-style: none;
-  background: var(--background-color);
+  background: var(--background);
   position: absolute;
   top: 60px;
   left: 0;
@@ -68,15 +68,15 @@ export default {
 }
 
 body.dark-theme .nav-links {
-  background: var(--dark-background-color);
+  background: var(--dark-background);
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text);
 }
 
 body.dark-theme .nav-links a {
-  color: var(--dark-text-color);
+  color: var(--dark-text);
 }
 </style>
