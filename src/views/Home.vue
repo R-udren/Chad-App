@@ -7,14 +7,14 @@ import Card from '../components/Card.vue';
 <template>
   <div class="home">
     <Main>
-      <h1>Welcome to Our Website!</h1>
+      <h1>Welcome to Chad Application!</h1>
       <p>
-        We are excited to have you here. Our mission is to provide exceptional services that meet your needs.
+        We are excited to have you here. Our goal is to achieve the best results and highest marks.
       </p>
       <div class="cards-container">
-        <Card title="Our Services" text="Explore our wide range of services." buttonText="Learn More"/>
-        <Card title="Projects" text="Take a look at our recent projects." buttonText="See Projects"/>
-        <Card title="Contact Us" text="Get in touch with us for more information." buttonText="Contact Now"/>
+        <Card title="Our Services" text="Explore our wide range of services." buttonText="Learn More" link="/services"/>
+        <Card title="Projects" text="Take a look at our recent projects." buttonText="See Projects" link="/projects"/>
+        <Card title="Contact Us" text="Get in touch with us for more information." buttonText="Contact Now" link="/contact"/>
       </div>
     </Main>
   </div>
@@ -27,15 +27,17 @@ import Card from '../components/Card.vue';
 }
 
 .cards-container {
-  display: block;
-  columns: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing);
   margin-top: var(--margin);
 }
 
 @media (max-width: 768px) {
   .cards-container {
-    columns: 1;
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
