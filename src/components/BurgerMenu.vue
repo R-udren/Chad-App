@@ -48,6 +48,11 @@ export default {
   cursor: pointer;
 }
 
+.burger-menu span {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
 .burger-menu:focus {
   outline: none;
 }
@@ -55,13 +60,16 @@ export default {
 .nav-links {
   display: grid;
   list-style: none;
-  background: var(--background);
-  position: fixed;
+  background-color: var(--second-background);
+  border-radius: 8px 0 0 8px;
   top: 60px;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: clamp(80px, 50%, 150px);
   padding: 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links li {
@@ -71,5 +79,10 @@ export default {
 .nav-links a {
   text-decoration: none;
   color: var(--text);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
 }
 </style>
