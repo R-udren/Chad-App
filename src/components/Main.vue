@@ -11,7 +11,5 @@
 <style scoped>
 .main-content {
   padding: 20px;
-  background-color: var(--background);
-  flex: 3;
 }
 </style>
