@@ -45,12 +45,12 @@
 body {
     color: var(--text);
     background-color: var(--background);
+    font-size: var(--p);
     font-family: 'Inter', sans-serif;
+    accent-color: var(--accent);
     margin: 0;
     padding: 0;
-    font-size: var(--p);
     transition: background-color 0.3s, color 0.3s;
-    accent-color: var(--accent);
 }
 
 h1, h2, h3, h4, h5, h6, p {
