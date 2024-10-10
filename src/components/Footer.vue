@@ -41,9 +41,8 @@
 }
 
 .footer-content .links img {
-  width: 24px;
-  height: 24px;
-  filter: invert(0.2);
+  width: 20px;
+  height: 20px;
 }
 
 .footer-content .links a {
