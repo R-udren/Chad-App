@@ -103,6 +103,7 @@ export default {
   color: var(--text);
   position: relative;
   font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-links a:hover {
