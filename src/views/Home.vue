@@ -27,15 +27,15 @@ import Card from '../components/Card.vue';
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: block;
+  columns: 3;
   gap: var(--spacing);
-  margin-top: var(--margin-lg);
+  margin-top: var(--margin);
 }
 
 @media (max-width: 768px) {
   .cards-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    columns: 1;
   }
 }
 </style>
