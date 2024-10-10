@@ -1,5 +1,4 @@
 <script setup>
-
 </script>
 
 <template>
@@ -16,19 +15,29 @@
 </template>
 
 <style scoped>
-.footer-content {
-  text-align: center;
-  padding-top: var(--spacing);
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing);
   background-color: var(--second-background);
   color: var(--subtext);
-  position: absolute;
   width: 100%;
-  bottom: 0;
   transition: background-color 0.3s ease, color 0.3s ease;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-content p {
-  margin: 0;
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
 }
 
 .footer-content .links img {
@@ -39,5 +48,14 @@
 
 .footer-content .links a {
   margin: 0 0.5rem;
+}
+
+/* Invert icon colors based on the theme */
+[data-theme="light"] .footer-content .links img {
+  filter: invert(0.2);
+}
+
+[data-theme="dark"] .footer-content .links img {
+  filter: invert(1);
 }
 </style>
