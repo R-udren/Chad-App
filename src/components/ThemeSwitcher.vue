@@ -46,7 +46,7 @@ export default {
 .theme-switcher {
   background: var(--background);
   border: 1px solid var(--primary);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: var(--p);
