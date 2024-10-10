@@ -24,19 +24,23 @@
 }
 
 /* Colors */
+/* Light Theme - Catppuccin Latte */
 [data-theme="light"] {
     --text: #4c4f69;
     --subtext: #6c6f85;
     --background: #eff1f5;
+    --second-background: #e6e9ef;
     --primary: #8839ef;
     --secondary: #7287fd;
     --accent: #ea76cb;
 }
 
+/* Dark Theme - Catppuccin Mocha */
 [data-theme="dark"] {
     --text: #cdd6f4;
     --subtext: #a6adc8;
     --background: #1e1e2e;
+    --second-background: #181825;
     --primary: #cba6f7;
     --secondary: #89b4fa;
     --accent: #f5c2e7;
