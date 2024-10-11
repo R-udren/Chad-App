@@ -5,8 +5,7 @@
 <template>
   <div class="about">
     <h1>About Us</h1>
-    <p>Our company specializes in creating high-quality solutions for clients. This is where you can share more about
-      your team, your mission, and your values.</p>
+    <p>In Chad Application, we are committed to providing the best services to our customers. We are a team of professionals who are dedicated to achieving the best results and highest marks.</p>
   </div>
 </template>
 
