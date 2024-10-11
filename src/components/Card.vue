@@ -1,6 +1,6 @@
 <script>
 import Button from './Button.vue';
-import {useRouter} from 'vue-router';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'Card',
@@ -12,7 +12,7 @@ export default {
     text: String,
     buttonText: String,
     link: String,
-    image: String || null
+    image: HTMLImageElement || String
   },
   setup(props) {
     const router = useRouter();
@@ -23,7 +23,7 @@ export default {
       }
     }
 
-    return {handleClick};
+    return { handleClick };
   }
 };
 </script>
@@ -42,7 +42,7 @@ export default {
   border: 1px solid var(--primary);
   border-radius: var(--border-radius);
   padding: var(--spacing);
-  width: clamp(200px, 50%, 400px);
+  width: clamp(200px, 50%, 300px);
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
