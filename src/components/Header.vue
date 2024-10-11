@@ -75,7 +75,6 @@ export default {
   align-items: center;
 }
 
-/* Gradient text styles for the logo */
 .logo {
   font-size: var(--h4);
   font-weight: 700;
@@ -86,7 +85,6 @@ export default {
   color: transparent;
 }
 
-/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;

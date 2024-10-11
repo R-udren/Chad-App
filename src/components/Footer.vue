@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing);
+  padding: var(--spacing) 0;
   background-color: var(--second-background);
   color: var(--subtext);
   width: 100%;
@@ -49,7 +49,6 @@
   margin: 0 0.5rem;
 }
 
-/* Invert icon colors based on the theme */
 [data-theme="light"] .footer-content .links img {
   filter: invert(0.2);
 }

@@ -1,6 +1,6 @@
 <script>
 import Button from './Button.vue';
-import { useRouter } from 'vue-router';
+import {useRouter} from 'vue-router';
 
 export default {
   name: 'Card',
@@ -23,7 +23,7 @@ export default {
       }
     }
 
-    return { handleClick };
+    return {handleClick};
   }
 };
 </script>
