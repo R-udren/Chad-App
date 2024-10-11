@@ -43,7 +43,7 @@ export default {
 
 <style scoped>
 .card {
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: var(--border-radius);
   padding: var(--spacing);
   width: clamp(200px, 50%, 400px);
