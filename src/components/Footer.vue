@@ -27,6 +27,7 @@
   bottom: 0;
   left: 0;
   position: fixed;
+  height: 40px;
 }
 
 .footer-content {
