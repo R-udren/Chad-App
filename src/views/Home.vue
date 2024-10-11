@@ -1,6 +1,5 @@
 <script setup>
 import Main from '../components/Main.vue';
-import Aside from '../components/Aside.vue';
 import Card from '../components/Card.vue';
 </script>
 
@@ -12,8 +11,8 @@ import Card from '../components/Card.vue';
         We are excited to have you here. Our goal is to achieve the best results and highest marks.
       </p>
       <div class="cards-container">
-        <Card title="Our Services" text="Explore our wide range of services." buttonText="Learn More" link="/services"/>
-        <Card title="Projects" text="Take a look at our recent projects." buttonText="See Projects" link="/projects"/>
+        <Card title="Our Services" text="Explore our wide range of services." buttonText="Learn More" link="/about"/>
+        <Card title="Projects" text="Take a look at our recent projects." buttonText="See Projects" link="/portfolio"/>
         <Card title="Contact Us" text="Get in touch with us for more information." buttonText="Contact Now" link="/contact"/>
       </div>
     </Main>
