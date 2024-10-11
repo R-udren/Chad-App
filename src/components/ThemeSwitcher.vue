@@ -1,38 +1,31 @@
-<script>
-export default {
-  name: "ThemeSwitcher",
-  data() {
-    return {
-      isDarkTheme: false,
-    };
-  },
-  mounted() {
-    // Check current theme in localStorage
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      this.isDarkTheme = storedTheme === "dark";
-    } else {
-      // Check system preference
-      this.isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    this.applyTheme();
-  },
-  methods: {
-    toggleTheme() {
-      this.isDarkTheme = !this.isDarkTheme;
-      this.applyTheme();
-      // Save current theme in localStorage
-      localStorage.setItem("theme", this.isDarkTheme ? "dark" : "light");
-    },
-    applyTheme() {
-      if (this.isDarkTheme) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
-    },
-  },
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const isDarkTheme = ref(false);
+
+const applyTheme = () => {
+  if (isDarkTheme.value) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light");
+  }
 };
+
+const toggleTheme = () => {
+  isDarkTheme.value = !isDarkTheme.value;
+  applyTheme();
+  localStorage.setItem("theme", isDarkTheme.value ? "dark" : "light");
+};
+
+onMounted(() => {
+  const storedTheme = localStorage.getItem("theme");
+  if (storedTheme) {
+    isDarkTheme.value = storedTheme === "dark";
+  } else {
+    isDarkTheme.value = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  applyTheme();
+});
 </script>
 
 <template>
