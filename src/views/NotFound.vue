@@ -14,4 +14,13 @@
   text-align: center;
   margin-top: 50px;
 }
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: bold;
+}
+
 </style>
