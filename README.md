@@ -1,6 +1,14 @@
 # Chad App
 
+Chad as described [Here](https://en.wikipedia.org/wiki/Chad_(slang)).
+
 ## Project Setup
+
+### Clone repo
+```sh
+git clone https://github.com/R-udren/Chad-App.git
+cd Chad-App
+```
 
 ```sh
 npm install
@@ -24,56 +32,19 @@ npm run build
 npm run lint
 ```
 
-## Project Task Checklist
+## Usage with Docker
 
-### 1. Website Structure
+### Build Docker Image
 
-- [ ] Create a main structure for the website using semantic HTML elements.
-    - [x] Implement **Header** with site logo/name and navigation links.
-    - [ ] Create a **Main** section with headings, paragraphs, and images.
-    - [ ] Design a **Sidebar** with related content or additional information.
-    - [ ] Add a **Footer** with social links and basic site information.
+```sh
+docker build . -t chad-app
+```
 
-### 2. Page Components
+### Run on port 8080
 
-- [ ] Build separate pages using Vue components.
-    - [ ] **Home**: Main introduction with welcome text and content.
-    - [ ] **About**: Personal information and biography with a photo.
-    - [ ] **Skills**: Display skills using visual elements like bars or stars.
-    - [ ] **Projects**: List of projects with descriptions and links.
-    - [ ] **Contact**: Contact form or social media links.
-
-### 3. Navigation
-
-- [ ] Implement a responsive **Navigation Bar** with:
-    - [ ] Links to **Home**, **About**, **Projects**, and **Contact** pages.
-    - [ ] **Dropdown menu** for a "Services" section.
-    - [ ] **Hamburger menu** for the mobile view.
-
-### 4. Card Components
-
-- [ ] Design interactive **Card Components** using CSS:
-    - [ ] Each card includes an image, title, description, and button.
-    - [ ] Apply hover effects and transitions for a smooth user experience.
-    - [ ] Create a **Modal Window** that opens on button click.
-
-### 5. Animations and Effects
-
-- [ ] Add CSS animations and keyframes for hover and interactive effects.
-- [ ] Implement visual improvements using gradients and transitions.
-- [ ] Ensure smooth user experience through optimized CSS animations.
-
-### 6. Responsive Design
-
-- [ ] Use **media queries** to adjust layout for different devices.
-- [ ] Implement a **responsive grid** or **flex layout** for cards and content.
-- [ ] Optimize the navigation bar for both desktop and mobile screens.
-
-### 7. Dark Mode
-
-- [x] Implement a **Dark Mode** switch that toggles between light and dark themes.
-- [ ] Ensure components and pages adjust correctly based on the theme.
-
+```sh
+docker run -d -p 8080:80 chad-app
+```
 <details>
   <summary>Raw Tasks</summary>
 
