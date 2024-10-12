@@ -31,7 +31,6 @@ import Main from "../components/Main.vue";
 <style scoped>
 .portfolio {
   text-align: center;
-  padding: 20px;
 }
 
 .avatar img {

@@ -62,5 +62,13 @@ form textarea {
   border-radius: var(--border-radius);
   width: clamp(200px, 80%, 400px);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus-visible,
+form textarea:focus-visible {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+  outline: var(--accent);
 }
 </style>
