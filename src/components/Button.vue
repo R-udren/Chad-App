@@ -34,4 +34,16 @@ const emit = defineEmits(['click']);
   color: var(--background);
   transform: scale(0.95);
 }
+
+.styled-button:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.styled-button:disabled {
+  background: var(--subtext);
+  border-color: var(--subtext);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 </style>
