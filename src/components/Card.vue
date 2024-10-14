@@ -1,35 +1,26 @@
-<script>
+<script setup>
 import Button from './Button.vue';
-import {useRouter} from 'vue-router';
+import { useRouter } from 'vue-router';
 
-export default {
-  name: 'Card',
-  components: {
-    Button
-  },
-  props: {
-    title: String,
-    text: String,
-    buttonText: String,
-    link: String,
-    image: HTMLImageElement || String
-  },
-  setup(props) {
-    const router = useRouter();
+const props = defineProps({
+  title: String,
+  text: String,
+  buttonText: String,
+  link: String,
+  image: [HTMLImageElement, String]
+});
 
-    function handleClick() {
-      if (!props.link) return;
+const router = useRouter();
 
-      if (props.link.startsWith('http')) {
-        window.open(props.link, '_blank', 'noopener noreferrer');
-      } else {
-        router.push(props.link);
-      }
-    }
+function handleClick() {
+  if (!props.link) return;
 
-    return {handleClick};
+  if (props.link.startsWith('http')) {
+    window.open(props.link, '_blank', 'noopener noreferrer');
+  } else {
+    router.push(props.link);
   }
-};
+}
 </script>
 
 <template>
@@ -51,7 +42,7 @@ export default {
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,18 +50,19 @@ export default {
 
 .card:hover {
   box-shadow: 0 0 12px var(--primary);
+  transform: translateY(-2px);
 }
 
 .card img {
   width: 100%;
-  height: 200px; /* I have no idea how to handle this properly */
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
 }
 
 .card h3 {
-  margin: 16px 0 8px;
+  margin: var(--spacing) 0 var(--spacing-sm);
 }
 
 .card p {
@@ -78,15 +70,15 @@ export default {
 }
 
 .card button {
-  margin-top: 16px;
+  margin-top: var(--spacing);
   width: 100%;
   max-width: 200px;
-  align-self: center;
 }
 
 @media (max-width: 768px) {
   .card img {
-    height: 150px;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }
 
