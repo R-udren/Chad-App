@@ -7,18 +7,22 @@ const props = defineProps({
   text: String,
   buttonText: String,
   link: String,
-  image: [HTMLImageElement, String]
+  image: [HTMLImageElement, String],
+  modal: Boolean
 });
 
 const router = useRouter();
+const emit = defineEmits(['openModal']);
 
 function handleClick() {
-  if (!props.link) return;
-
-  if (props.link.startsWith('http')) {
-    window.open(props.link, '_blank', 'noopener noreferrer');
-  } else {
-    router.push(props.link);
+  if (props.modal) {
+    emit('openModal');
+  } else if (props.link) {
+    if (props.link.startsWith('http')) {
+      window.open(props.link, '_blank', 'noopener noreferrer');
+    } else {
+      router.push(props.link);
+    }
   }
 }
 </script>

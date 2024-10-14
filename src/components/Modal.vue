@@ -1,100 +1,56 @@
 <script setup>
-import {ref} from 'vue';
+const props = defineProps({
+  title: String,
+  isOpen: Boolean
+});
 
-const isModalOpen = ref(false);
-
-function openModal() {
-  isModalOpen.value = true;
-}
-
-function closeModal() {
-  isModalOpen.value = false;
-}
-
-function toggleModal() {
-  isModalOpen.value = !isModalOpen.value;
-}
-
-export {isModalOpen, openModal, closeModal, toggleModal};
+const emit = defineEmits(['close']);
 </script>
 
 <template>
-  <div class="modal">
+  <div v-if="isOpen" class="modal-overlay">
     <div class="modal-content">
-      <button @click="closeModal">Close</button>
+      <button class="close-button" @click="$emit('close')">Close</button>
+      <h2>{{ title }}</h2>
       <slot></slot>
     </div>
   </div>
 </template>
 
 <style scoped>
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
 .modal-content {
   background: var(--background);
-  border: 2px solid var(--primary);
-  border-radius: var(--border-radius);
   padding: var(--spacing);
-  width: clamp(200px, 50%, 400px);
-  max-width: 100%;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
 }
 
-.modal-content button {
+.close-button {
   background: var(--primary);
   color: var(--background);
   border: none;
+  padding: var(--spacing-sm);
   border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
   cursor: pointer;
-  font-size: var(--p);
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-  outline: none;
+  float: right;
 }
 
-.modal-content button:hover {
-  background: linear-gradient(120deg, var(--primary), var(--accent));
-  color: var(--background);
-  transform: translateY(-2px);
-}
-
-.modal-content button:active {
+.close-button:hover {
   background: var(--accent);
-  color: var(--background);
-  transform: scale(0.95);
-}
-
-.modal-content button {
-  margin-top: 16px;
-}
-
-.modal-content button:last-child {
-  margin-left: 16px;
-}
-
-@media (max-width: 768px) {
-  .modal-content button {
-    width: 100%;
-    max-width: 200px;
-    padding: var(--spacing);
-    margin-top: 16px;
-  }
-
-  .modal-content button:last-child {
-    margin-left: 0;
-  }
 }
 </style>
