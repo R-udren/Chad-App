@@ -102,7 +102,7 @@ function closeModal() {
   }
 }
 
-h4 {
+h3, h4 {
   margin: 0;
 }
 </style>
