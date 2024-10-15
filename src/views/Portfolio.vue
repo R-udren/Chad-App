@@ -21,16 +21,16 @@ const projects = [
   {
     title: "ToDoList",
     text: "Console task management app with basic CRUD operations, registration, and database.",
-    techStack: ["JavaScript", "Node.js", "MongoDB"],
+    techStack: ["Python", "SQLite3"],
     image: toDoListImage,
-    link: "/todo-list"
+    link: "https://github.com/R-udren/ToDoList"
   },
   {
     title: "AI Assistant",
     text: "This project is an AI assistant built using Python. It uses OpenAI's models for conversation and the Whisper API for speech recognition.",
     techStack: ["Python", "OpenAI API", "Whisper API"],
     image: aiAssistantImage,
-    link: "/ai-assistant"
+    link: "https://github.com/R-udren/VoiceChatOver9000"
   }
 ];
 
