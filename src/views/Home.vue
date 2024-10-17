@@ -4,19 +4,21 @@ import Card from '../components/Card.vue';
 </script>
 
 <template>
-  <div class="home">
-    <Main>
+  <Main>
+    <div class="home">
+
       <h1>Welcome to Chad Application!</h1>
       <p>
         We are excited to have you here. Our goal is to achieve the best results and highest marks.
       </p>
       <div class="cards-container">
-        <Card title="Our Services" text="Explore our wide range of services." buttonText="Learn More" link="/about"/>
-        <Card title="Projects" text="Take a look at our recent projects." buttonText="See Projects" link="/portfolio"/>
-        <Card title="Contact Us" text="Get in touch with us for more information." buttonText="Contact Now" link="/contact"/>
+        <Card buttonText="Learn More" link="/about" text="Explore our wide range of services." title="Our Services"/>
+        <Card buttonText="See Projects" link="/portfolio" text="Take a look at our recent projects." title="Projects"/>
+        <Card buttonText="Contact Now" link="/contact" text="Get in touch with us for more information."
+              title="Contact Us"/>
       </div>
-    </Main>
-  </div>
+    </div>
+  </Main>
 </template>
 
 <style scoped>

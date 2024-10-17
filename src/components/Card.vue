@@ -1,6 +1,6 @@
 <script setup>
 import Button from './Button.vue';
-import { useRouter } from 'vue-router';
+import {useRouter} from 'vue-router';
 
 const props = defineProps({
   title: String,

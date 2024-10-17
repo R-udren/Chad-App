@@ -48,16 +48,16 @@ function closeModal() {
   <Main>
     <div class="portfolio">
       <div class="avatar">
-        <img src="https://i.pinimg.com/originals/8e/de/53/8ede538fcf75a0a1bd812810edb50cb7.jpg" alt="Picture">
+        <img alt="Picture" src="https://i.pinimg.com/originals/8e/de/53/8ede538fcf75a0a1bd812810edb50cb7.jpg">
       </div>
       <h1>My Portfolio</h1>
       <p>Here are some of my recent projects:</p>
       <div class="cards-container">
         <Card v-for="project in projects" :key="project.title"
-              :title="project.title" :text="project.text"
-              :buttonText="project.modal ? 'View Details' : 'View Project'"
-              :link="project.link" :image="project.image"
-              :modal="project.modal"
+              :buttonText="project.modal ? 'View Details' : 'View Project'" :image="project.image"
+              :link="project.link"
+              :modal="project.modal" :text="project.text"
+              :title="project.title"
               @openModal="openProjectModal(project)"/>
       </div>
 

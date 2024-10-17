@@ -1,32 +1,35 @@
 <script setup>
 import '@fortawesome/fontawesome-free/css/all.css';
 import Button from "../components/Button.vue";
+import Main from "../components/Main.vue";
 </script>
 
 <template>
-  <div class="contact">
-    <h1>Contact Us</h1>
-    <p>Get in touch with us for more information.</p>
+  <Main>
+    <div class="contact">
+      <h1>Contact Us</h1>
+      <p>Get in touch with us for more information.</p>
 
-    <form>
-      <label for="name">
-        <i class="fas fa-user"></i> Name:
-      </label>
-      <input type="text" id="name" name="name" required>
+      <form>
+        <label for="name">
+          <i class="fas fa-user"></i> Name:
+        </label>
+        <input id="name" name="name" required type="text">
 
-      <label for="email">
-        <i class="fas fa-envelope"></i> Email:
-      </label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">
+          <i class="fas fa-envelope"></i> Email:
+        </label>
+        <input id="email" name="email" required type="email">
 
-      <label for="message">
-        <i class="fas fa-comment"></i> Message:
-      </label>
-      <textarea id="message" name="message" required></textarea>
+        <label for="message">
+          <i class="fas fa-comment"></i> Message:
+        </label>
+        <textarea id="message" name="message" required></textarea>
 
-      <button type="submit" class="styled-button">Submit</button>
-    </form>
-  </div>
+        <button class="styled-button" type="submit">Submit</button>
+      </form>
+    </div>
+  </Main>
 </template>
 
 <style scoped>
