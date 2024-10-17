@@ -1,20 +1,13 @@
-<script>
-export default {
-  name: "BurgerMenu",
-  data() {
-    return {
-      isOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-    },
-    closeMenu() {
-      this.isOpen = false;
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue';
+const isOpen = ref(false);
+
+function toggleMenu() {
+  isOpen.value = !isOpen.value;
+}
+function closeMenu() {
+  isOpen.value = false;
+}
 </script>
 
 <template>
