@@ -1,5 +1,4 @@
 <script setup>
-import '@fortawesome/fontawesome-free/css/all.css';
 import Button from "../components/Button.vue";
 import Main from "../components/Main.vue";
 </script>
@@ -12,17 +11,17 @@ import Main from "../components/Main.vue";
 
       <form>
         <label for="name">
-          <i class="fas fa-user"></i> Name:
+          Name:
         </label>
         <input id="name" name="name" required type="text">
 
         <label for="email">
-          <i class="fas fa-envelope"></i> Email:
+          Email:
         </label>
         <input id="email" name="email" required type="email">
 
         <label for="message">
-          <i class="fas fa-comment"></i> Message:
+          Message:
         </label>
         <textarea id="message" name="message" required></textarea>
 
