@@ -29,34 +29,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <button class="theme-switcher" @click="toggleTheme">
+  <button class="styled-button" @click="toggleTheme">
     <span v-if="isDarkTheme">🌞 Light</span>
     <span v-else>🌜 Dark</span>
   </button>
 </template>
 
-<style scoped>
-.theme-switcher {
-  background: var(--background);
-  border: 1px solid var(--primary);
-  border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-size: var(--p);
-  color: var(--primary);
-  transition: background 0.3s, color 0.3s, transform 0.2s;
-  outline: none;
-}
-
-.theme-switcher:hover {
-  background: linear-gradient(120deg, var(--primary), var(--accent));
-  color: var(--background);
-  transform: translateY(-2px);
-}
-
-.theme-switcher:active {
-  background: var(--accent);
-  color: var(--background);
-  transform: scale(0.95);
-}
+<style>
 </style>

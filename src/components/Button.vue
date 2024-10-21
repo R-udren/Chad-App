@@ -11,7 +11,7 @@ const emit = defineEmits(['click']);
 <style>
 .styled-button {
   background: var(--background);
-  border: 2px solid var(--primary);
+  border: 1px solid var(--primary);
   border-radius: var(--border-radius);
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -31,11 +31,6 @@ const emit = defineEmits(['click']);
   background: var(--accent);
   color: var(--background);
   transform: scale(0.95);
-}
-
-.styled-button:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 1px;
 }
 
 .styled-button:disabled {
