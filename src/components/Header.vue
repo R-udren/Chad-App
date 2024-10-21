@@ -8,7 +8,7 @@ import BurgerMenu from './BurgerMenu.vue';
     <nav class="navbar">
       <div class="left-section">
         <div class="logo gradient-logo">
-          <router-link to="/">Chad Web Application</router-link>
+          <router-link to="/">ChadApp</router-link>
         </div>
       </div>
       <div class="center-section">
