@@ -1,21 +1,15 @@
-<script>
+<script setup>
 import ThemeSwitcher from './ThemeSwitcher.vue';
 import BurgerMenu from './BurgerMenu.vue';
-
-export default {
-  name: "Header",
-  components: {
-    ThemeSwitcher,
-    BurgerMenu,
-  },
-};
 </script>
 
 <template>
   <header class="app-header">
     <nav class="navbar">
       <div class="left-section">
-        <div class="logo gradient-logo">Chad Web Application</div>
+        <div class="logo gradient-logo">
+          <router-link to="/">Chad Web Application</router-link>
+        </div>
       </div>
       <div class="center-section">
         <ul class="nav-links">
