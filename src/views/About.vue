@@ -41,6 +41,12 @@ import Main from "../components/Main.vue";
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .about img {
+    width: 80%;
+  }
+}
+
 .about a {
   color: var(--primary);
   text-decoration: none;
@@ -48,5 +54,4 @@ import Main from "../components/Main.vue";
   display: block;
   margin-top: 20px;
 }
-
 </style>
