@@ -1,6 +1,7 @@
 <script setup>
 import Button from './Button.vue';
 import {useRouter} from 'vue-router';
+import {computed} from "vue";
 
 const props = defineProps({
   title: String,
@@ -25,19 +26,20 @@ function handleClick() {
     }
   }
 }
+
+const hasImage = computed(() => !!props.image);
 </script>
 
 <template>
-  <div class="card">
-    <div class="card-image">
-      <img v-if="image" :src="image" alt="Card Image"/>
+  <div :class="['card', { 'no-image': !hasImage }]">
+    <div v-if="hasImage" class="card-image">
+      <img :src="image" alt="Card Image"/>
     </div>
     <h3>{{ title }}</h3>
     <p>{{ text }}</p>
     <Button @click="handleClick">{{ buttonText }}</Button>
   </div>
 </template>
-
 
 <style scoped>
 .card {
@@ -75,6 +77,10 @@ function handleClick() {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.card.no-image h3 {
+  margin-top: var(--spacing);
 }
 
 .card h3 {
