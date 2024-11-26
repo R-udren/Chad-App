@@ -42,6 +42,21 @@ function openProjectModal(project) {
 function closeModal() {
   isModalOpen.value = false;
 }
+
+async function cacheImages(imageUrls) {
+  if ('caches' in window) {
+    const cache = await caches.open('image-cache');
+    await cache.addAll(imageUrls);
+  }
+}
+
+const imageUrls = [
+  steamAccountsImage,
+  toDoListImage,
+  aiAssistantImage
+];
+
+cacheImages(imageUrls);
 </script>
 
 <template>

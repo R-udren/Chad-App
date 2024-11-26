@@ -29,12 +29,15 @@ function handleClick() {
 
 <template>
   <div class="card">
-    <img v-if="image" :src="image" alt="Card Image"/>
+    <div class="card-image">
+      <img v-if="image" :src="image" alt="Card Image"/>
+    </div>
     <h3>{{ title }}</h3>
     <p>{{ text }}</p>
     <Button @click="handleClick">{{ buttonText }}</Button>
   </div>
 </template>
+
 
 <style scoped>
 .card {
@@ -57,12 +60,21 @@ function handleClick() {
   transform: translateY(-2px);
 }
 
-.card img {
+.card-image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: var(--border-radius);
   margin-bottom: var(--spacing-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card h3 {
@@ -77,13 +89,6 @@ function handleClick() {
   margin-top: var(--spacing);
   width: 100%;
   max-width: 200px;
-}
-
-@media (max-width: 768px) {
-  .card img {
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
 }
 
 .card button:hover {
