@@ -25,7 +25,7 @@ import Main from "../components/Main.vue";
         </label>
         <textarea id="message" name="message" required></textarea>
 
-        <button class="styled-button" type="submit">Submit</button>
+        <Button type="submit">Send</Button>
       </form>
     </div>
   </Main>
@@ -65,6 +65,11 @@ form textarea {
   width: clamp(200px, 80%, 400px);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:user-invalid,
+form textarea:user-invalid {
+  border-color: red;
 }
 
 form input:focus-visible,
