@@ -4,7 +4,7 @@
 <template>
   <footer class="app-footer">
     <div class="footer-content">
-      <p>&copy; 2024 ChadApp. All rights reserved.</p>
+      <p>&copy; 2025 ChadApp. All rights reserved.</p>
       <div class="links">
         <a href="https://github.com/R-udren" rel="noopener noreferrer" target="_blank">
           <img alt="Github" src="../assets/github.svg"/>
