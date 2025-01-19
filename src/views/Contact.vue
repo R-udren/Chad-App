@@ -1,34 +1,31 @@
 <script setup>
 import Button from "../components/Button.vue";
-import Main from "../components/Main.vue";
 </script>
 
 <template>
-  <Main>
-    <div class="contact">
-      <h1>Contact Us</h1>
-      <p>Get in touch with us for more information.</p>
+  <div class="contact">
+    <h1>Contact Us</h1>
+    <p>Get in touch with us for more information.</p>
 
-      <form>
-        <label for="name">
-          Name:
-        </label>
-        <input id="name" name="name" required type="text">
+    <form>
+      <label for="name">
+        Name:
+      </label>
+      <input id="name" name="name" required type="text">
 
-        <label for="email">
-          Email:
-        </label>
-        <input id="email" name="email" required type="email">
+      <label for="email">
+        Email:
+      </label>
+      <input id="email" name="email" required type="email">
 
-        <label for="message">
-          Message:
-        </label>
-        <textarea id="message" name="message" required></textarea>
+      <label for="message">
+        Message:
+      </label>
+      <textarea id="message" name="message" required></textarea>
 
-        <Button type="submit">Send</Button>
-      </form>
-    </div>
-  </Main>
+      <Button type="submit">Send</Button>
+    </form>
+  </div>
 </template>
 
 <style scoped>

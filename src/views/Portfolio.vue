@@ -4,7 +4,6 @@ import Modal from "../components/Modal.vue";
 import steamAccountsImage from "../assets/SteamAccountsConsole.png";
 import toDoListImage from "../assets/ToDoList.png";
 import aiAssistantImage from "../assets/AIChat.png";
-import Main from "../components/Main.vue";
 import {ref} from 'vue';
 
 const isModalOpen = ref(false);
@@ -60,30 +59,28 @@ cacheImages(imageUrls);
 </script>
 
 <template>
-  <Main>
-    <div class="portfolio">
-      <div class="avatar">
-        <img alt="Picture" src="https://i.pinimg.com/originals/8e/de/53/8ede538fcf75a0a1bd812810edb50cb7.jpg">
-      </div>
-      <h1>My Portfolio</h1>
-      <p>Here are some of my recent projects:</p>
-      <div class="cards-container">
-        <Card v-for="project in projects" :key="project.title"
-              :buttonText="project.modal ? 'View Details' : 'View Project'" :image="project.image"
-              :link="project.link"
-              :modal="project.modal" :text="project.text"
-              :title="project.title"
-              @openModal="openProjectModal(project)"/>
-      </div>
-
-      <Modal :isOpen="isModalOpen" @close="closeModal">
-        <h2>{{ selectedProject.title }}</h2>
-        <p>{{ selectedProject.text }}</p>
-        <h3>Tech Stack:</h3>
-        <h4 v-for="tech in selectedProject.techStack" :key="tech">{{ tech }}</h4>
-      </Modal>
+  <div class="portfolio">
+    <div class="avatar">
+      <img alt="Picture" src="https://i.pinimg.com/originals/8e/de/53/8ede538fcf75a0a1bd812810edb50cb7.jpg">
     </div>
-  </Main>
+    <h1>My Portfolio</h1>
+    <p>Here are some of my recent projects:</p>
+    <div class="cards-container">
+      <Card v-for="project in projects" :key="project.title"
+            :buttonText="project.modal ? 'View Details' : 'View Project'" :image="project.image"
+            :link="project.link"
+            :modal="project.modal" :text="project.text"
+            :title="project.title"
+            @openModal="openProjectModal(project)"/>
+    </div>
+
+    <Modal :isOpen="isModalOpen" @close="closeModal">
+      <h2>{{ selectedProject.title }}</h2>
+      <p>{{ selectedProject.text }}</p>
+      <h3>Tech Stack:</h3>
+      <h4 v-for="tech in selectedProject.techStack" :key="tech">{{ tech }}</h4>
+    </Modal>
+  </div>
 </template>
 
 <style scoped>

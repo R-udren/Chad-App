@@ -1,14 +1,17 @@
 <script setup>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <header>
+    <Header/>
+  </header>
+  <main>
+    <router-view>
+    </router-view>
+  </main>
+  <footer>
+    <Footer/>
+  </footer>
 </template>
-
-<style>
-#app {
-  font-family: 'Inter', sans-serif;
-}
-</style>

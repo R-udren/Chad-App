@@ -1,19 +1,16 @@
 <script setup>
-import Main from "../components/Main.vue";
 </script>
 
 <template>
-  <Main>
-    <div class="about">
-      <h1>About</h1>
-      <p>In This Application, I am committed to providing the best services to my customers. </p>
-      <p>My mission is to innovate and lead in my industry, ensuring customer satisfaction and continuous
-        improvement.</p>
-      <p>I value integrity, excellence, and teamwork, and I strive to exceed expectations in everything I do.</p>
-      <a href="https://en.wikipedia.org/wiki/Chad_(slang)" rel="noopener noreferrer" target="_blank">What is Chad?</a>
-      <img alt="Future" src="https://marketer.ua/wp-content/uploads/2024/01/future-internet.gif">
-    </div>
-  </Main>
+  <div class="about">
+    <h1>About</h1>
+    <p>In This Application, I am committed to providing the best services to my customers. </p>
+    <p>My mission is to innovate and lead in my industry, ensuring customer satisfaction and continuous
+      improvement.</p>
+    <p>I value integrity, excellence, and teamwork, and I strive to exceed expectations in everything I do.</p>
+    <a href="https://en.wikipedia.org/wiki/Chad_(slang)" rel="noopener noreferrer" target="_blank">What is Chad?</a>
+    <img alt="Future" src="https://marketer.ua/wp-content/uploads/2024/01/future-internet.gif">
+  </div>
 </template>
 
 <style scoped>
