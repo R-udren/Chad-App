@@ -81,7 +81,6 @@ import BurgerMenu from './BurgerMenu.vue';
 
 .logo a {
   text-decoration: none;
-  color: var(--text);
 }
 
 .nav-links {
