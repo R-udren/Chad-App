@@ -1,10 +1,12 @@
 <script setup>
-import { ref } from 'vue';
+import {ref} from 'vue';
+
 const isOpen = ref(false);
 
 function toggleMenu() {
   isOpen.value = !isOpen.value;
 }
+
 function closeMenu() {
   isOpen.value = false;
 }
@@ -75,6 +77,11 @@ function closeMenu() {
 }
 
 .nav-links a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.nav-links a.router-link-active {
   color: var(--primary);
   text-shadow: 0 0 5px var(--primary);
 }

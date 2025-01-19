@@ -79,6 +79,11 @@ import BurgerMenu from './BurgerMenu.vue';
   color: transparent;
 }
 
+.logo a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -99,6 +104,11 @@ import BurgerMenu from './BurgerMenu.vue';
 }
 
 .nav-links a:hover {
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.nav-links a.router-link-active {
   color: var(--primary);
   text-shadow: 0 0 5px var(--primary);
 }
